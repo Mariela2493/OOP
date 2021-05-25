@@ -8,6 +8,7 @@ public class Main {
 	// write your code here
 
         Mariela nombre= new Mariela();
+        System.out.print("Trabaajo de Clase Mayo 24");
         Jorge padre = new Jorge("Hola");
     }
 }
