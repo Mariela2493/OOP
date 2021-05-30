@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
 
-        Mariela nombre= new Mariela();
+        Mariela nombre= new Mariela("Hola");
         System.out.print("Trabajo de Clase Mayo 24\n");
         Jorge padre = new Jorge("Hola");
 
