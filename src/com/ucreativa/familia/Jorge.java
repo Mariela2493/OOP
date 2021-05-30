@@ -5,9 +5,9 @@ public class Jorge {
      private int edad;
      private String hobby;
 
-     public Jorge(String sSaludar){
+     public Jorge(String saludar, int edad, String hobby){
          this.edad= 58;
-         System.out.print(sSaludar);
+         System.out.print(saludar + edad + hobby);
      }
      public int  getAge(){
 

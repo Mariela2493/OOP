@@ -9,7 +9,7 @@ public class Main {
 
         Mariela nombre= new Mariela("Hola");
         System.out.print("Trabajo de Clase Mayo 24\n");
-        Jorge padre = new Jorge("Hola");
+        Jorge padre = new Jorge("Hola",58,"Dormir");
 
     }
 }
