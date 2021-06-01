@@ -14,6 +14,7 @@ public class Main {
      Familiar  mama = new Familiar ("Marjorie","1234", 55, true, "Madre");
      Familiar  papa = new Familiar ("Jorge","1234", 59, false, "Padre");
 
+
      List<BitacoraVacunacion> bitacora= new ArrayList<>();
     bitacora.add(new BitacoraVacunacion(mama,"Pfizer", new Date()));
     bitacora.add(new BitacoraVacunacion(papa,"Jhonson", new Date()));
