@@ -14,7 +14,6 @@ public class Persona {
          this.cedula= cedula;
          this.edad= edad;
          this.riesgo=riesgo;
-
     }
     public String getNombre() {
         return nombre;
