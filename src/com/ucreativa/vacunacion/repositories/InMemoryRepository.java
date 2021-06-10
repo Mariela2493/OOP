@@ -8,10 +8,10 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Scanner;
 
-public class InMemoryRepository {
-  private List<BitacoraVacunacion> db;
+
+public class InMemoryRepository  implements Repository{
+  private  final List<BitacoraVacunacion> db;
 
     public InMemoryRepository() {
         this.db = new ArrayList <>();
@@ -19,7 +19,7 @@ public class InMemoryRepository {
     public void save(Persona persona, String marca, Date fecha){
         this.db.add(new BitacoraVacunacion(persona,marca,fecha));
     }
-    public List<String>  get(){
+    public List<String> get(){
         List <String> lines= new ArrayList<>();
         SimpleDateFormat format= new SimpleDateFormat("dd/mm/yyyy");
         for(BitacoraVacunacion item:db) {
