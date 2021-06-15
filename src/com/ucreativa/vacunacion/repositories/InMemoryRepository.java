@@ -1,8 +1,6 @@
 package com.ucreativa.vacunacion.repositories;
-
 import com.ucreativa.vacunacion.entities.BitacoraVacunacion;
 import com.ucreativa.vacunacion.entities.Persona;
-
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
