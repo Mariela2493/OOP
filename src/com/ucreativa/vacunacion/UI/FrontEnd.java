@@ -50,6 +50,7 @@ public class FrontEnd extends JFrame {
         JTextField txtParentesco = new JTextField();
         JTextField txtMarca = new JTextField();
 
+
         JCheckBox txtRiesgo = new JCheckBox();
         JCheckBox txtEsAmigo = new JCheckBox();
         txtEsAmigo.addActionListener(new AbstractAction() {
@@ -69,7 +70,9 @@ public class FrontEnd extends JFrame {
         salvar.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 BitacoraService service = new BitacoraService(new FileRepository());
+                try{
                 service.save(txtNombre.getText(),
                         txtCedula.getText(),
                         txtEdad.getText(),
@@ -90,9 +93,12 @@ public class FrontEnd extends JFrame {
                 txtParentesco.setText("");
                 txtMarca.setText("");
 
-                String reporte = String.join("\n", service.get());
-                JOptionPane.showMessageDialog(((JButton)e.getSource()).getParent(), reporte);
-
+                    String reporte = String.join("\n", service.get());
+                    JOptionPane.showMessageDialog(((JButton) e.getSource()).getParent(), reporte);
+                } catch (ErrorEdadExeception error) {
+                    JOptionPane.showMessageDialog(((JButton) e.getSource()).getParent(),
+                            error.getMessage());
+                }
             }
         });
 
